@@ -1,7 +1,7 @@
 #login_form {
   background: grey;
   margin: auto;
-  width: 50%;
+  width: 100%;
   padding: 10px;
   display: flex;
   flex-direction: column;

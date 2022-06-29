@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from "../../services/login.service";
 import { catchError, of } from "rxjs";
 import { Title } from "@angular/platform-browser";
-import { Location } from '@angular/common';
 import { Router } from "@angular/router";
 
 @Component({
@@ -14,9 +13,10 @@ export class LoginComponent implements OnInit {
   title:string = "Login";
   errorMsg: string = "";
 
-  constructor(private titleService:Title, private loginService:LoginService, private location: Location,
+  constructor(private titleService:Title,
+              private loginService:LoginService,
               private router: Router) {
-    this.titleService.setTitle("Login");
+    this.titleService.setTitle(this.title);
   }
 
   ngOnInit(): void {

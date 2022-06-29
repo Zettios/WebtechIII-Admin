@@ -1,3 +1,20 @@
 body {
   font-family: Arial, sans-serif;
+  width: 75%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+#container {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+app-login {
+  width: 50%;
+  min-width: 320px;
+  top: 25%;
+  position: relative;
 }
