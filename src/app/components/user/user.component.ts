@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Persoon} from "../interface";
+import {Persoon} from "../../interface";
 
 @Component({
   selector: 'app-user',

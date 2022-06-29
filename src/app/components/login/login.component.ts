@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {LoginService} from "../login.service";
-import {catchError, of} from "rxjs";
-import {Title} from "@angular/platform-browser";
+import { LoginService } from "../../services/login.service";
+import { catchError, of } from "rxjs";
+import { Title } from "@angular/platform-browser";
+import { Location } from '@angular/common';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,8 @@ export class LoginComponent implements OnInit {
   title:string = "Login";
   errorMsg: string = "";
 
-  constructor(private titleService:Title, private loginService:LoginService) {
+  constructor(private titleService:Title, private loginService:LoginService, private location: Location,
+              private router: Router) {
     this.titleService.setTitle("Login");
   }
 
@@ -40,7 +43,11 @@ export class LoginComponent implements OnInit {
         }
         let json = JSON.parse(decoded);
         if (json['roles'].some((x: string) => x === "ROLE_ADMIN")) {
-          //routerLink
+          localStorage.setItem('token', token)
+          this.router.navigate(['/admin'])
+            .then( result => {
+              console.log(result);
+            })
         } else {
           this.errorMsg = `Error: User not found or user is not an admin.`;
         }

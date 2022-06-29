@@ -6,9 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
+  token:string|null = "";
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit(): void {
+    if (localStorage.getItem('token') !== null) {
+      this.token = localStorage.getItem('token');
+    }
   }
 }
