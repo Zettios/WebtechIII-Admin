@@ -1,0 +1,8 @@
+<div id="login_form">
+  <label for="username">Username</label>
+  <input type="text" value="Henk" id="username" #username>
+  <label for="password">Password</label>
+  <input type="password" value="henk" id="password" #password>
+  <button (click)="login(username.value, password.value)" id="btn-login">Login</button>
+  <p *ngIf="errorMsg"><b>{{ errorMsg }}</b></p>
+</div>

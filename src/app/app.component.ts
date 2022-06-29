@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'admin-panel';
+  new_hobby:string = 'Demonstratie';
+
+  add_hobby(e:string) {
+    console.log(e);
+    this.new_hobby = e;
+  }
 }
