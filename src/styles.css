@@ -18,3 +18,9 @@ app-login {
   top: 25%;
   position: relative;
 }
+
+app-admin {
+  width: 100%;
+  min-width: 320px;
+}
+

@@ -1,0 +1,9 @@
+app-pie-chart {
+  display: flex;
+  flex-direction: column;
+}
+
+#total-data {
+  display: flex;
+  justify-content: space-evenly;
+}

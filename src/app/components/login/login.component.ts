@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from "../../services/login.service";
+import { LoginService } from "../../services/login/login.service";
 import { catchError, of } from "rxjs";
 import { Title } from "@angular/platform-browser";
 import { Router } from "@angular/router";

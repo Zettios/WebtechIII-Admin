@@ -7,7 +7,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdminComponent } from './components/admin/admin.component';
-import { ApiChartComponent } from './components/api-chart/api-chart.component';
+import { AggregateComponent } from './components/aggregate/aggregate.component';
+import { PieChartComponent } from './components/pie-chart/pie-chart.component';
+import {NgChartsModule} from "ng2-charts";
+import {UserComponent} from "./components/user/user.component";
+import { NavbarComponent } from './components/navbar/navbar.component';
 import {Ng2GoogleChartsModule} from "ng2-google-charts";
 
 @NgModule({
@@ -15,17 +19,20 @@ import {Ng2GoogleChartsModule} from "ng2-google-charts";
     AppComponent,
     LoginComponent,
     AdminComponent,
-    ApiChartComponent
+    AggregateComponent,
+    PieChartComponent,
+    UserComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    Ng2GoogleChartsModule,
     RouterModule.forRoot([
-      {path:'', component: LoginComponent},
-      {path:'admin', component: AdminComponent},
-    ])
+      {path: '', component: LoginComponent},
+      {path: 'admin', component: AdminComponent},
+    ]),
+    Ng2GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,9 @@
-<div id="chart-container">
-  <app-api-chart [apis]="apiInfo"></app-api-chart>
+<app-navbar></app-navbar>
+<div id="data-selection">
+  <button (click)="setActiveButton('apis', $event)" #apibutton id="apibutton">API data</button>
+  <button (click)="setActiveButton('players', $event)" #playersbutton id="playerbutton">Players</button>
+</div>
+<div id="data-container" [ngSwitch]="pressedButton">
+  <app-aggregate *ngSwitchCase="'apis'" [token]="token"></app-aggregate>
+  <app-user *ngSwitchCase="'players'" [token]="token"></app-user>
 </div>

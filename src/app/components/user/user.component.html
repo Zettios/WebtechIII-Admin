@@ -1,12 +1,3 @@
-<p>
-  Naam: {{ p.naam }}<br>
-  Leeftijd: {{ p.leeftijd }}
-</p>
-
-<div>
-  <b>Hier komen de hobbies<br></b>
-  <ul>
-    <li *ngFor="let h of hobbies">{{ h }} (<a href="#" (click)="del_hobby(h)">del</a>)</li>
-  </ul>
-  <p *ngIf="added_hobby"><b>Hobby uit de data component: {{ added_hobby }}</b></p>
-</div>
+<ul>
+  <li *ngFor="let user of allUsers">{{ user.username }}: {{ user.email }}</li>
+</ul>

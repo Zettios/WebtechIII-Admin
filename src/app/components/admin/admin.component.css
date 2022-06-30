@@ -1,0 +1,19 @@
+#data-container {
+  background: grey;
+  padding: 10px;
+}
+
+#data-selection {
+  display: flex;
+  justify-content: center;
+}
+
+#data-selection button {
+  width: 100%;
+  border-style: none;
+  padding: 5px 0px;
+}
+
+#data-selection button:hover {
+  background: cornflowerblue;
+}

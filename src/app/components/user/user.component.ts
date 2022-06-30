@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Persoon} from "../../interface";
+import {UsersService} from "../../services/users/users.service";
+import {User} from "../../interface";
 
 @Component({
   selector: 'app-user',
@@ -7,17 +8,21 @@ import {Persoon} from "../../interface";
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  @Input() added_hobby:string = '';
+  @Input() token:string = '';
+  allUsers:Array<User> = [];
 
-  p:Persoon = {'naam':'Enrico', 'leeftijd':25};
-  hobbies:string[] = ['gamen', 'chatten', 'sterven']
-
-  constructor() { }
+  constructor(private users:UsersService) { }
 
   ngOnInit(): void {
+    this.userData();
   }
 
-  del_hobby(e:string):void {
-    this.hobbies.splice(this.hobbies.indexOf(e), 1);
+  userData() {
+    if (this.token !== null) {
+      this.users.getUsers(this.token)
+        .subscribe(data => {
+          this.allUsers = data;
+        });
+    }
   }
 }
