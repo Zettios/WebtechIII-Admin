@@ -1,7 +1,16 @@
 #api-info-container {
   background-color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 h2 {
   text-align: center;
+}
+
+#chart-container {
+  width: 900px;
+  height: 100%;
+  align-self: center;
+  padding-bottom: 20px;
 }

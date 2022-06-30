@@ -44,10 +44,10 @@ export class PieChartComponent implements OnInit, OnChanges {
       responsive: true,
       allowHtml: true,
       height: "100%",
-      width: "50%",
+      width: "100%",
       chartArea: {
-        height: "80%",
-        width: "80%",
+        height: "100%",
+        width: "100%",
       }
     },
   };
