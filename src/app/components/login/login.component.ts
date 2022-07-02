@@ -23,8 +23,6 @@ export class LoginComponent implements OnInit {
   }
 
   login(username:string, password:string) {
-    console.log(username);
-    console.log(password);
     this.loginService.login(username, password)
       .pipe(
         catchError(error => {
@@ -45,9 +43,6 @@ export class LoginComponent implements OnInit {
         if (json['roles'].some((x: string) => x === "ROLE_ADMIN")) {
           localStorage.setItem('token', token)
           this.router.navigate(['/admin'])
-            .then( result => {
-              console.log(result);
-            })
         } else {
           this.errorMsg = `Error: User not found or user is not an admin.`;
         }

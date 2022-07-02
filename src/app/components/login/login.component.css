@@ -1,10 +1,19 @@
 #login_form {
   background: grey;
   margin: auto;
-  width: 100%;
   padding: 10px;
   display: flex;
   flex-direction: column;
+}
+
+#login_form h1 {
+  text-align: center;
+}
+
+#login_form hr {
+  width: 100%;
+  color: white;
+  margin-bottom: 15px;
 }
 
 #btn-login {

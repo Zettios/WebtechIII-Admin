@@ -17,7 +17,9 @@ export class PieChartComponent implements OnInit, OnChanges {
 
   onResize() {
     let ccComponent = this.pieChart.component!;
-    ccComponent.draw();
+    if (ccComponent !== undefined) {
+      ccComponent.draw();
+    }
   }
 
   constructor() { }
@@ -30,11 +32,12 @@ export class PieChartComponent implements OnInit, OnChanges {
     if (changes.hasOwnProperty('data')) {
       if (changes['data'].currentValue !== changes['data'].previousValue) {
         changes['data'].currentValue.forEach((el:Array<any>) => {
-          console.log(el)
           this.pieChart.dataTable.push(el);
         })
         let ccComponent = this.pieChart.component!;
-        ccComponent.draw();
+        if (ccComponent !== undefined) {
+          ccComponent.draw();
+        }
       }
     }
   }
