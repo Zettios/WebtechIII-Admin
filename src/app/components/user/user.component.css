@@ -1,0 +1,22 @@
+table {
+  width: 100%;
+}
+
+th, td {
+  padding: 5px 0px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background: #b2b2b2;
+}
+tr:nth-child(odd) {
+  background: #FFF
+}
+
+@media screen and (min-width: 1000px) {
+  th, td {
+    padding: 5px;
+    text-align: center;
+  }
+}

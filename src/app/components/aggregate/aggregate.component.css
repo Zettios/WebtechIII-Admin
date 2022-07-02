@@ -1,9 +1,43 @@
-app-pie-chart {
-  display: flex;
-  flex-direction: column;
+#aggregate-container {
+  padding: 0 3px;
 }
 
 #total-data {
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 5px;
 }
+
+#amount-of-games, #amount-of-players {
+  background: white;
+  padding: 10px 0;
+  text-align: center;
+  margin: 0;
+}
+
+app-pie-chart {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 600px) {
+  #total-data {
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  #amount-of-games, #amount-of-players {
+    width: 100%;
+  }
+
+  #amount-of-games {
+    margin-right: 2px;
+  }
+
+  #amount-of-players {
+    margin-left: 2px;
+  }
+}
+

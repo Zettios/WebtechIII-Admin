@@ -7,10 +7,18 @@ import {GoogleChartComponent, GoogleChartInterface, GoogleChartType} from "ng2-g
 @Component({
   selector: 'app-pie-chart',
   templateUrl: './pie-chart.component.html',
-  styleUrls: ['./pie-chart.component.css']
+  styleUrls: ['./pie-chart.component.css'],
+  host: {
+    '(window:resize)': 'onResize()'
+  }
 })
 export class PieChartComponent implements OnInit, OnChanges {
   @Input() data:Array<any> = [];
+
+  onResize() {
+    let ccComponent = this.pieChart.component!;
+    ccComponent.draw();
+  }
 
   constructor() { }
 
@@ -26,7 +34,6 @@ export class PieChartComponent implements OnInit, OnChanges {
           this.pieChart.dataTable.push(el);
         })
         let ccComponent = this.pieChart.component!;
-        //let ccWrapper = ccComponent.wrapper;
         ccComponent.draw();
       }
     }

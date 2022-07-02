@@ -21,6 +21,7 @@ export class UserComponent implements OnInit {
     if (this.token !== null) {
       this.users.getUsers(this.token)
         .subscribe(data => {
+          console.log(data);
           this.allUsers = data;
         });
     }

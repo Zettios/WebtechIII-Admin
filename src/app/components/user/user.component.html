@@ -1,3 +1,14 @@
-<ul>
-  <li *ngFor="let user of allUsers">{{ user.username }}: {{ user.email }}</li>
-</ul>
+<!--<ul>-->
+<!--  <li *ngFor="let user of allUsers">{{ user.username }}: {{ user.email }}</li>-->
+<!--</ul>-->
+
+<table>
+  <tr>
+    <th>Gebruikersnaam</th>
+    <th>E-mail</th>
+  </tr>
+  <tr *ngFor="let user of allUsers">
+    <td>{{ user.username }}</td>
+    <td>{{ user.email }}</td>
+  </tr>
+</table>

@@ -11,12 +11,12 @@ import { AggregateService } from "../../services/aggregate/aggregate.service";
 export class AdminComponent implements OnInit {
   title:string = "Overview";
   token:string = "";
-  pressedButton:string = "apis";
+  pressedButton:string = 'apis'
+  isValue: number = 1;
   @ViewChild('apibutton') apiButton: ElementRef | undefined;
   @ViewChild('playersbutton') playersButton: ElementRef | undefined;
 
-  constructor(private titleService:Title,
-              private router: Router) {
+  constructor(private titleService:Title) {
     this.titleService.setTitle(this.title);
   }
 
@@ -27,7 +27,8 @@ export class AdminComponent implements OnInit {
     }
   }
 
-  setActiveButton(button:string, e:Event) {
+  toggle(button:string, num:number) {
+    this.isValue = num;
     this.pressedButton = button;
   }
 }

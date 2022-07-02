@@ -1,6 +1,5 @@
 body {
   font-family: Arial, sans-serif;
-  width: 75%;
   display: flex;
   margin: auto;
   justify-content: center;
@@ -24,3 +23,8 @@ app-admin {
   min-width: 320px;
 }
 
+@media screen and (min-width: 1000px) {
+  body {
+    width: 75%;
+  }
+}
