@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {AggregateService} from "../../services/aggregate/aggregate.service";
 import {Api} from "../../interface";
-import {catchError, Observable, throwError} from "rxjs";
+import {catchError, throwError} from "rxjs";
 import {LogoutService} from "../../services/logout/logout.service";
 
 @Component({

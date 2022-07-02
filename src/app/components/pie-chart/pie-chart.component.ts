@@ -1,8 +1,5 @@
-import {Component, HostListener, Input, OnChanges, OnInit, SimpleChanges, ViewChild} from '@angular/core';
-import { BaseChartDirective } from "ng2-charts";
-import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
-import DatalabelsPlugin from 'chartjs-plugin-datalabels';
-import {GoogleChartComponent, GoogleChartInterface, GoogleChartType} from "ng2-google-charts";
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {GoogleChartInterface} from "ng2-google-charts";
 
 @Component({
   selector: 'app-pie-chart',

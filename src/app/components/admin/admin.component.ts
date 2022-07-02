@@ -1,7 +1,5 @@
 import {Component, ElementRef, Input, OnInit, SimpleChange, SimpleChanges, ViewChild} from '@angular/core';
 import { Title } from "@angular/platform-browser";
-import { Router } from "@angular/router";
-import { AggregateService } from "../../services/aggregate/aggregate.service";
 
 @Component({
   selector: 'app-admin',
