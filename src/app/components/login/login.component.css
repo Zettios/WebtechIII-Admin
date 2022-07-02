@@ -16,6 +16,10 @@
   margin-bottom: 15px;
 }
 
+#login_form label {
+  margin-top: 5px;
+}
+
 #btn-login {
   margin-top: 10px;
 }

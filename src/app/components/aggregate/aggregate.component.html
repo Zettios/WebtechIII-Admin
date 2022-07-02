@@ -1,7 +1,7 @@
 <div id="aggregate-container">
   <div id="total-data">
-    <p id="amount-of-games" *ngIf="amountOfGames"><b>Totaal gespeelde spellen:</b><br> {{ amountOfGames }}</p>
-    <p id="amount-of-players" *ngIf="amountOfPlayers"><b>Totaal aantal spelers:</b><br> {{ amountOfPlayers }}</p>
+    <p id="amount-of-games" *ngIf="amountOfGames" aria-label="Totaal gespeelde spellen"><b>Totaal gespeelde spellen:</b><br> {{ amountOfGames }}</p>
+    <p id="amount-of-players" *ngIf="amountOfPlayers" aria-label="Totaal aantal spelers"><b>Totaal aantal spelers:</b><br> {{ amountOfPlayers }}</p>
   </div>
   <app-pie-chart [data]="data"></app-pie-chart>
 </div>

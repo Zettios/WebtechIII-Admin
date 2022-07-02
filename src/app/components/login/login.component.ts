@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
       .pipe(
         catchError(error => {
           if (error['status']) {
-            this.errorMsg = `Error: User not found or user is not an admin.`;
+            this.errorMsg = `Error: Gebruiker bestaat niet of is geen administrator.`;
           }
           return of([]);
         })
@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('token', token)
           this.router.navigate(['/admin'])
         } else {
-          this.errorMsg = `Error: User not found or user is not an admin.`;
+          this.errorMsg = `Error: Gebruiker bestaat niet of is geen administrator.`;
         }
         return data;
       });

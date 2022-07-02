@@ -16,10 +16,12 @@
 
 #data-selection button:hover {
   background: cornflowerblue;
+  cursor: pointer;
 }
 
 .selected-button {
   background: cornflowerblue;
+  cursor: pointer;
 }
 
 .unselected-button {

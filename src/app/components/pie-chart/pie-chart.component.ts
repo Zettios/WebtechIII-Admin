@@ -58,6 +58,9 @@ export class PieChartComponent implements OnInit, OnChanges {
       chartArea: {
         height: "100%",
         width: "100%",
+      },
+      legend: {
+        position: 'middle'
       }
     },
   };

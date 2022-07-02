@@ -1,7 +1,9 @@
 <app-navbar></app-navbar>
 <div id="data-selection">
-  <button (click)="toggle('apis', 1)" [ngClass]="{ 'selected-button' : isValue == 1 }" #apibutton id="api-button">API data</button>
-  <button (click)="toggle('players', 2)" [ngClass]="{ 'selected-button' : isValue == 2 }" #playersbutton  id="player-button">Players</button>
+  <button (click)="toggle('apis', 1)" [ngClass]="{ 'selected-button' : isValue == 1 }" #apibutton
+          id="api-button" aria-label="Laat API data zien">API data</button>
+  <button (click)="toggle('players', 2)" [ngClass]="{ 'selected-button' : isValue == 2 }" #playersbutton
+          id="player-button" aria-label="Laat alle gebruikers zien" >Gebruikers</button>
 </div>
 <div id="data-container" [ngSwitch]="pressedButton">
   <app-aggregate *ngSwitchCase="'apis'" [token]="token"></app-aggregate>
